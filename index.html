@@ -27,11 +27,12 @@
                 <a href="#home" class="active">Bosh Sahifa</a>
                 <a href="#about">Biz Haqida</a>
                 <a href="#services">Xizmatlar</a>
-                <a href="#calculator">Kalkulyator</a>
+                <a href=\"#map\">Do'konimiz</a>
+                <a href=\"#offer\">Takliflar</a>
                 <a href="#contact">Bog'lanish</a>
             </div>
             <div class="contact-info">
-                <a href="tel:+998996308888" class="phone">+998 99 630 88 88</a>
+                <a href="tel:+99894273550" class="phone">+998 94 273 55 03</a>
             </div>
         </div>
     </nav>
@@ -43,8 +44,8 @@
                 <h2>Toshkent Shahri Bo'ylab Xavfsiz Yetkazib Berish</h2>
                 <p>Barcha turlardagi tovarlarni tez va ishonchli yetkazib beramiz</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="document.getElementById('calculator').scrollIntoView()">Kalkulyator</button>
-                    <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView()">Buyurtma Qoldirish</button>
+                    <button class="btn btn-primary" onclick="document.getElementById('map').scrollIntoView()">Do'konimiz</button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView()">Bog'lanish</button>
                 </div>
             </div>
         </div>
@@ -121,30 +122,53 @@
         </div>
     </section>
 
-    <!-- Calculator Section -->
-    <section id="calculator" class="calculator">
+    <!-- Map & Offer Section -->
+    <section id="map" class="map-section">
         <div class="container">
-            <h2>Narx Kalkulyatori</h2>
-            <div class="calculator-form">
-                <div class="form-group">
-                    <label for="distance">Masofani Tanlang (km):</label>
-                    <select id="distance" onchange="calculatePrice()">
-                        <option value="">Tanlang...</option>
-                        <option value="5">0-5 km (5,000 so'm)</option>
-                        <option value="10">6-10 km (8,000 so'm)</option>
-                        <option value="15">11-15 km (12,000 so'm)</option>
-                        <option value="20">16-20 km (15,000 so'm)</option>
-                        <option value="25">20+ km (20,000 so'm)</option>
-                    </select>
+            <div class="map-content">
+                <div class="map-info">
+                    <h2>Do'konimizni Ziyorat Qiling</h2>
+                    <p>Bizning ofisimiz Toshkent shahri markazida joylashgan. Shu yerda siz bevosita sotuvchilar bilan muloqot qilishingiz va eng yaxshi takliflardan bahramand bo'lishingiz mumkin.</p>
+                    <h3>Manzil va Vaqt:</h3>
+                    <ul class="offer-list">
+                        <li>📍 <strong>Manzil:</strong> Toshkent Shahri</li>
+                        <li>📞 <strong>Telefon:</strong> <a href="tel:+99894273550">+998 94 273 55 03</a></li>
+                        <li>⏰ <strong>Ish Vaqti:</strong> 09:00 - 18:00 (Dushanba-Juma)</li>
+                        <li>💬 <strong>Telegram:</strong> <a href="https://t.me/zafarxatlari">@zafarxatlari</a></li>
+                    </ul>
                 </div>
-                <div class="form-group">
-                    <label for="weight">Vazni (kg):</label>
-                    <input type="number" id="weight" min="0" max="50" placeholder="Kg da kiriting" onchange="calculatePrice()">
+                <div class="map-embed">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.7680911625353!2d69.27470227345903!3d41.31621167133481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b57b17b1d1d%3A0x123456789!2sTashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1692892374628" width="100%" height="400" style="border:0; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.15);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="price-display" id="priceDisplay">
-                    <h3>Jami: <span id="totalPrice">0</span> so'm</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Offer Section -->
+    <section id="offer" class="offer-section">
+        <div class="container">
+            <h2>Bizning Takliflar</h2>
+            <div class="offer-grid">
+                <div class="offer-card">
+                    <div class="offer-icon">🎁</div>
+                    <h3>Maxsus Chegirma</h3>
+                    <p>Birinchi buyurtmada 15% chegirma olishni unutmang!</p>
                 </div>
-                <button class="btn btn-primary" onclick="orderNow()">Buyurtma Qoldirish</button>
+                <div class="offer-card">
+                    <div class="offer-icon">🚚</div>
+                    <h3>Tez Yetkazib Berish</h3>
+                    <p>24 soat ichida to'liq Toshkent shahriga yetkazib beramiz</p>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon">💼</div>
+                    <h3>Korporativ Xizmat</h3>
+                    <p>Kompaniyalar uchun maxsus narxlar va shartnomalar</p>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-icon">⭐</div>
+                    <h3>Sifat Kafolati</h3>
+                    <p>Barcha tovarlar sifat nazorati bilan yetkazib beriladi</p>
+                </div>
             </div>
         </div>
     </section>
@@ -167,7 +191,7 @@
                     <h3>Bog'lanish Ma'lumotlari</h3>
                     <div class="info-item">
                         <h4>📞 Telefon:</h4>
-                        <p><a href="tel:+998996308888">+998 99 630 88 88</a></p>
+                        <p><a href="tel:+99894273550">+998 94 273 55 03</a></p>
                     </div>
                     <div class="info-item">
                         <h4>📍 Manzil:</h4>
